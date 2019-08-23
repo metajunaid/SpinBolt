@@ -1,0 +1,16 @@
+.sbl-circ {
+  height: 48px;
+  width: 48px;
+  color: #5a5a5a;
+  position: relative;
+  display: inline-block;
+  border: 5px solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate 1s linear infinite; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }

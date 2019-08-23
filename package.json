@@ -1,0 +1,24 @@
+{
+  "name": "spinbolt",
+  "version": "1.0.0",
+  "description": "Pure CSS Loaders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch src/scss -o dist",
+    "build": "node-sass src/scss -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdjunaidalam5/SpinBolt.git"
+  },
+  "author": "Md Junaid Alam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdjunaidalam5/SpinBolt/issues"
+  },
+  "homepage": "https://github.com/mdjunaidalam5/SpinBolt#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

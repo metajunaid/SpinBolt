@@ -1,0 +1,27 @@
+.sbl-circ {
+  height: 48px;
+  width: 48px;
+  color: #5a5a5a;
+  position: relative;
+  display: inline-block;
+  border: 5px solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate 1s linear infinite; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.loader-contianer {
+  display: inline-block;
+  padding: 50px; }
