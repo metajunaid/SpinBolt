@@ -1,0 +1,18 @@
+
+@import 'variables';
+.sbl-circ-path {
+    height: $height;
+    width: $width;
+    color: rgba($loadercolor, 0.2);
+    position: relative;
+    display: inline-block;
+    border: 5px solid;
+    border-radius: 50%;
+    border-right-color: $loadercolor;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
