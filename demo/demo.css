@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.loader-contianer {
+    display: inline-block;
+    padding: 20px 30px;
+    margin: 20px;
+    text-align: center;
+}
+.loader-contianer:hover  .view-source{
+    opacity: 1;
+}
+.view-source {
+    cursor: pointer;
+    font-family: 'B612 Mono', monospace;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+.source-modal {
+    background: #000000b0;
+    width: 100%;
+    display: none;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.source-container {
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 60%;
+}
+.source-html, .source-css {
+    position: relative;
+}
+.source-lang{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    text-align: center;
+    background: #7a7a7dfa;
+    color: #fff;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.source-modal  textarea {
+    width: 100%;
+    font-family: 'B612 Mono', monospace;
+    font-size: 15px;
+    padding: 20px;
+}

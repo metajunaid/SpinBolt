@@ -31,14 +31,3 @@
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap; }
-
-.loader-contianer {
-  display: inline-block;
-  padding: 50px; }

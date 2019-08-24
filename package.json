@@ -6,19 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch src/scss -o dist",
-    "build": "node-sass src/scss -o dist"
+    "build": "node-sass src/scss -o dist",
+    "start": "http-server ./ -c-1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mdjunaidalam5/SpinBolt.git"
   },
   "author": "Md Junaid Alam",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mdjunaidalam5/SpinBolt/issues"
   },
   "homepage": "https://github.com/mdjunaidalam5/SpinBolt#readme",
   "dependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "http-server": "0.11.1"
   }
 }
