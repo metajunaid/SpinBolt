@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('.view-source').on('click', function(){
         var cssClass = $(this).siblings('div[class*="sbl-"]')[0].className;
         $.ajax({
-            url: '../dist/'+cssClass+'.css',
+            url: 'dist/'+cssClass+'.css',
             success: function(data){
                 console.log(data);
                 $('#cssSnippet').val(data);
