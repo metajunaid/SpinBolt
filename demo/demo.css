@@ -1,17 +1,45 @@
+html, body, h1,h2,h3{
+    margin: 0;padding: 0;
+    
+}
+.header-text {
+    margin-top: 50px;
+    font-size: 40px;
+}
+main {
+    padding: 0 20px;
+    width: 100%;
+    font-family: 'B612 Mono';
+}
+header {
+    text-align: center;
+    color: #5a5a5a;
+}
+h1,h2,h3 {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (min-width: 768px) {
+    main {
+        margin: 0 auto;
+        width: 80%;
+    }
+  }
 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
-.loader-contianer {
+.loader-container {
     display: inline-block;
     padding: 20px 30px;
     margin: 20px;
     text-align: center;
 }
-.loader-contianer:hover  .view-source{
+.loader-container:hover  .view-source{
     opacity: 1;
 }
 .view-source {

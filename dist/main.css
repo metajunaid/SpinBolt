@@ -31,3 +31,66 @@
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
+
+.sbl-circ-dual {
+  height: 48px;
+  width: 48px;
+  color: #5a5a5a;
+  display: inline-block;
+  position: relative;
+  border: 5px solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate 1s linear infinite; }
+  .sbl-circ-dual::after {
+    content: '';
+    height: 40%;
+    width: 40%;
+    display: block;
+    color: #5a5a5a;
+    margin: 10px auto;
+    position: relative;
+    border: 5px solid;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: rotate .5s linear infinite reverse; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+.sbl-circ-ripple {
+  height: 48px;
+  width: 48px;
+  color: #5a5a5a;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block; }
+  .sbl-circ-ripple::after, .sbl-circ-ripple::before {
+    content: '';
+    height: 0;
+    width: 0;
+    border: inherit;
+    border: 5px solid;
+    border-radius: inherit;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    animation: circle-ripple  1s linear infinite; }
+  .sbl-circ-ripple::before {
+    animation-delay: -0.5s; }
+
+@keyframes circle-ripple {
+  0% {
+    height: 0;
+    width: 0;
+    left: 20px;
+    top: 20px; }
+  100% {
+    height: 48px;
+    width: 48px;
+    left: -5px;
+    top: -5px;
+    opacity: 0; } }

@@ -1,0 +1,32 @@
+@import 'variables';
+.sbl-circ-dual {
+    height: $height;
+    width: $width;
+    color: $loadercolor;
+    display: inline-block;
+    position: relative;
+    border: 5px solid;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: rotate 1s linear infinite;
+    
+    &::after {
+        content: '';
+        height: 40%;
+        width: 40%;
+        display: block;
+        color: $loadercolor;
+        margin: 10px auto;
+        position: relative;
+        border: 5px solid;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: rotate .5s linear infinite reverse;
+        
+    }
+}
+
+@keyframes rotate {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
