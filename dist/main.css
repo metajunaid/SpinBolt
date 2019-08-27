@@ -94,3 +94,41 @@
     left: -5px;
     top: -5px;
     opacity: 0; } }
+
+.sbl-seven-circles {
+  height: 48px;
+  width: 48px;
+  color: #5a5a5a;
+  position: relative;
+  animation: rotate 1s linear infinite;
+  display: inline-block; }
+  .sbl-seven-circles div {
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    border: 1px solid;
+    position: absolute; }
+    .sbl-seven-circles div:nth-child(1) {
+      top: 10%;
+      left: 5%; }
+    .sbl-seven-circles div:nth-child(2) {
+      top: 0;
+      left: 25%; }
+    .sbl-seven-circles div:nth-child(3) {
+      top: 10%;
+      right: 5%; }
+    .sbl-seven-circles div:nth-child(4) {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+    .sbl-seven-circles div:nth-child(5) {
+      bottom: 0;
+      left: 25%; }
+    .sbl-seven-circles div:nth-child(6) {
+      bottom: 10%;
+      left: 5%; }
+    .sbl-seven-circles div:nth-child(7) {
+      bottom: 10%;
+      right: 5%; }
