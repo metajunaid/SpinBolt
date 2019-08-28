@@ -1,4 +1,4 @@
-html, body, h1,h2,h3{
+html, body, h1,h2,h3,h4,h5,h6{
     margin: 0;padding: 0;
     
 }
@@ -16,16 +16,16 @@ header {
     text-align: center;
     color: #5a5a5a;
 }
-h1,h2,h3 {
-    margin: 0;
-    padding: 0;
+.bg-color-container,
+.fg-color-container {
+display: inline-block;
+vertical-align: middle;
 }
-@media screen and (min-width: 768px) {
-    main {
-        margin: 0 auto;
-        width: 80%;
-    }
-  }
+.color-container {text-align: center;}
+.color-container input {
+    vertical-align: middle;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -63,7 +63,7 @@ h1,h2,h3 {
     display: block;
     margin: 0 auto;
     margin-top: 100px;
-    width: 60%;
+    width: 90%;
 }
 .source-html, .source-css {
     position: relative;
@@ -85,4 +85,15 @@ h1,h2,h3 {
     font-family: 'B612 Mono', monospace;
     font-size: 15px;
     padding: 20px;
+    box-sizing: border-box;
 }
+
+@media screen and (min-width: 768px) {
+    main {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .source-container {
+        width: 60%;
+    }
+  }
