@@ -1,13 +1,17 @@
 
 $(document).ready(function(){
+    //Setting default background and foreground colors.
     var bgColor = '#ffffff', fgColor = '#5a5a5a';
     $('#backgroundColor').val(bgColor);
     $('#foregroundColor').val(fgColor);
 
+    //Adding view-source button
+    $('.loader-container').append('<div class="view-source">&lt;/&gt; Source</div>');
     var addStyle = function (styleId, cssRule) {
         $('#'+styleId).remove();
         $('<style>').prop({'type': 'text/css','id':styleId}).html(cssRule).appendTo('head');
     };
+    //Function to convert HEX color to RGB
     var convertHexToRGB = function(hex){
 	    hex = hex.replace('#','');
 	    r = parseInt(hex.substring(0,2), 16);
@@ -16,20 +20,23 @@ $(document).ready(function(){
 
 	    result = r+','+g+','+b;
 	    return result;
-	}
+    }
+    //Change background color
     $('#backgroundColor').off().on('change', function(){
         var color = $(this).val();
         var bgStyle = 'body{background-color:'+color+'}';
         addStyle('bgStyle', bgStyle);
         
     });
+    //Change foreground color
     $('#foregroundColor').off().on('change', function(){
         var color = $(this).val();
         var fgStyle = 'div[class*="sbl-"], div[class*="sbl-"]::after{color:'+color+'}';
         fgStyle += '.sbl-circ-path{color:rgba('+convertHexToRGB(color)+',0.2);border-color:rgba('+convertHexToRGB(color)+',0.2);border-right-color:'+color+'}';
         addStyle('fgStyle', fgStyle);
     });
-    $('.view-source').on('click', function(){
+    //Showing view-source after ajax call
+    $(document).on('click', '.view-source', function(){
         var cssClass = $(this).siblings('div[class*="sbl-"]')[0].className;
         $.ajax({
             url: 'dist/'+cssClass+'.css',

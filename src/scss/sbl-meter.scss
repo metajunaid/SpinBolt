@@ -1,0 +1,29 @@
+@import 'variables';
+
+.sbl-meter {
+    height: $height;
+    width: $width;
+    color: $loadercolor; 
+    border-radius: 50%;
+    border: 5px solid;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+        content: '';
+        height: 40%;
+        width: 5px;
+        border-radius: 5px;
+        display: block;
+        background: $loadercolor;
+        position: absolute;
+        left: 22px;
+        top: 5px;
+        transform-origin: bottom;
+        animation: rotate 1s linear infinite;
+    }
+}
+@keyframes rotate {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}

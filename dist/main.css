@@ -132,3 +132,30 @@
     .sbl-seven-circles div:nth-child(7) {
       bottom: 10%;
       right: 5%; }
+
+.sbl-meter {
+  height: 48px;
+  width: 48px;
+  color: #5a5a5a;
+  border-radius: 50%;
+  border: 5px solid;
+  position: relative;
+  display: inline-block; }
+  .sbl-meter::after {
+    content: '';
+    height: 40%;
+    width: 5px;
+    border-radius: 5px;
+    display: block;
+    background: #5a5a5a;
+    position: absolute;
+    left: 22px;
+    top: 5px;
+    transform-origin: bottom;
+    animation: rotate 1s linear infinite; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
