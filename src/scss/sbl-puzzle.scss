@@ -1,0 +1,39 @@
+@import 'variables';
+.sbl-puzzle{
+    height: $height;
+    width: $width;
+    color: $loadercolor;
+    position: relative;
+    display: inline-block;
+
+    div { 
+        border-radius: 50%;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 3px solid;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        animation: rotateTest1 4s linear infinite;
+        box-sizing: border-box;
+    }
+
+    $elements: 5;
+    @for $i from 0 to $elements {
+        div:nth-child(#{$i +1}) {
+            height: 2*(10 * $i) + 20%;
+            width: 2*(10 * $i) + 20%;
+        animation-delay: ($i*.5s) + .5s; 
+    }
+    }
+
+}
+
+
+
+@keyframes rotateTest1 {
+    50%{transform: rotate(360deg);}
+}

@@ -133,6 +133,12 @@
       bottom: 10%;
       right: 5%; }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
 .sbl-meter {
   height: 48px;
   width: 48px;
@@ -158,4 +164,48 @@
   0% {
     transform: rotate(0); }
   100% {
+    transform: rotate(360deg); } }
+
+.sbl-puzzle {
+  height: 48px;
+  width: 48px;
+  color: #5a5a5a;
+  position: relative;
+  display: inline-block; }
+  .sbl-puzzle div {
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: rotateTest1 4s linear infinite;
+    box-sizing: border-box; }
+  .sbl-puzzle div:nth-child(1) {
+    height: 20%;
+    width: 20%;
+    animation-delay: 0.5s; }
+  .sbl-puzzle div:nth-child(2) {
+    height: 40%;
+    width: 40%;
+    animation-delay: 1s; }
+  .sbl-puzzle div:nth-child(3) {
+    height: 60%;
+    width: 60%;
+    animation-delay: 1.5s; }
+  .sbl-puzzle div:nth-child(4) {
+    height: 80%;
+    width: 80%;
+    animation-delay: 2s; }
+  .sbl-puzzle div:nth-child(5) {
+    height: 100%;
+    width: 100%;
+    animation-delay: 2.5s; }
+
+@keyframes rotateTest1 {
+  50% {
     transform: rotate(360deg); } }
