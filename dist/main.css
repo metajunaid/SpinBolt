@@ -209,3 +209,48 @@
 @keyframes rotateTest1 {
   50% {
     transform: rotate(360deg); } }
+
+.sbl-pushing-shapes {
+  height: 48px;
+  width: 48px;
+  color: #5a5a5a;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: rotate 3s ease-in-out infinite; }
+  .sbl-pushing-shapes div {
+    color: #5a5a5a;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    left: 60px;
+    top: 12px;
+    box-sizing: border-box;
+    border: 3px solid;
+    animation: moving-shapes 2s linear infinite; }
+    .sbl-pushing-shapes div:nth-child(1) {
+      border-radius: 50%;
+      animation-delay: 0s; }
+    .sbl-pushing-shapes div:nth-child(2) {
+      transform: rotate(45deg);
+      animation-delay: 1s; }
+
+@keyframes moving-shapes {
+  0% {
+    left: 60px; }
+  50% {
+    left: 5px; }
+  60% {
+    left: 12px;
+    transform: rotate(135deg); }
+  70% {
+    left: 17px; }
+  100% {
+    left: -24px; } }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
