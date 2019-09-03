@@ -11,11 +11,12 @@
     
     &::after {
         content: '';
-        height: 40%;
-        width: 5px;
+        height: 25%;
+        width: 0;
         border-radius: 5px;
+        border: 3px solid;
         display: block;
-        background: $loadercolor;
+        color: inherit;
         position: absolute;
         left: 22px;
         top: 5px;

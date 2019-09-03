@@ -8,7 +8,7 @@
   box-sizing: border-box;
   animation: rotate 3s ease-in-out infinite; }
   .sbl-pushing-shapes div {
-    color: #5a5a5a;
+    color: inherit;
     height: 24px;
     width: 24px;
     position: absolute;

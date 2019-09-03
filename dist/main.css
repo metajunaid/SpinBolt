@@ -149,11 +149,12 @@
   display: inline-block; }
   .sbl-meter::after {
     content: '';
-    height: 40%;
-    width: 5px;
+    height: 25%;
+    width: 0;
     border-radius: 5px;
+    border: 3px solid;
     display: block;
-    background: #5a5a5a;
+    color: inherit;
     position: absolute;
     left: 22px;
     top: 5px;
@@ -220,7 +221,7 @@
   box-sizing: border-box;
   animation: rotate 3s ease-in-out infinite; }
   .sbl-pushing-shapes div {
-    color: #5a5a5a;
+    color: inherit;
     height: 24px;
     width: 24px;
     position: absolute;
