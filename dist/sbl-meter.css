@@ -8,11 +8,11 @@
   display: inline-block; }
   .sbl-meter::after {
     content: '';
-    height: 40%;
-    width: 5px;
+    height: 35%;
+    width: 0;
     border-radius: 5px;
     display: block;
-    background: #5a5a5a;
+    border: 2px solid;
     position: absolute;
     left: 22px;
     top: 5px;
