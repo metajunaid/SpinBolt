@@ -31,8 +31,10 @@ $(document).ready(function(){
     //Change foreground color
     $('#foregroundColor').off().on('change', function(){
         var color = $(this).val();
+        //Color change support for psudo elements
         var fgStyle = 'div[class*="sbl-"], div[class*="sbl-"]::after{color:'+color+'}';
         fgStyle += '.sbl-circ-path{color:rgba('+convertHexToRGB(color)+',0.2);border-color:rgba('+convertHexToRGB(color)+',0.2);border-right-color:'+color+'}';
+        fgStyle += '.sbl-rect-spin-fill::after{background:rgba('+convertHexToRGB(color)+',0.5);}';
         addStyle('fgStyle', fgStyle);
     });
     //Showing view-source after ajax call
