@@ -1,0 +1,30 @@
+@import 'variables';
+
+.sbl-rect-spin-fill {
+    color: $loadercolor;
+    height: $height;
+    width: $width;
+    position: relative;
+    border: 4px solid;
+    display: inline-block;
+    animation: rect-rotate 1s  linear infinite;
+}
+
+.sbl-rect-spin-fill::after {
+    content: '';
+    height: 0;
+    width: inherit;
+    display: block;
+    background: rgba($loadercolor, 0.5);
+    animation: fill-rect 1s linear infinite;
+}
+
+@keyframes rect-rotate {
+    0%{transform: rotate(0);}
+
+    50%,100%{transform: rotate(180deg);}
+}
+@keyframes fill-rect {
+    0%,50%{height: 0;}
+    100%{height: inherit;}
+}
