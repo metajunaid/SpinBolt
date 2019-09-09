@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     //Setting default background and foreground colors.
-    var bgColor = '#ffffff', fgColor = '#5a5a5a';
+    var bgColor = '#f0f8ff', fgColor = '#5a5a5a';
     $('#backgroundColor').val(bgColor);
     $('#foregroundColor').val(fgColor);
 
@@ -38,7 +38,7 @@ $(document).ready(function(){
         addStyle('fgStyle', fgStyle);
 
         //Change Text Color
-        $('header, .color-container').css('color',color);
+        $('header, .color-container, .view-source').css('color',color);
 
     });
     //Showing view-source after ajax call
@@ -48,8 +48,9 @@ $(document).ready(function(){
             url: 'dist/'+cssClass+'.css',
             success: function(data){
                 console.log(data);
-                $('#cssSnippet').val(data);
-                $('#htmlSnippet').val($('.'+cssClass)[0].outerHTML)
+                $('#cssSnippet').text(data);
+                $('#htmlSnippet').text($('.'+cssClass)[0].outerHTML);
+                Prism.highlightAll();
                 $('.source-modal').show();
             },
             error: function(e){

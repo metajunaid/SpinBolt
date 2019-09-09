@@ -2,20 +2,40 @@ html, body, h1,h2,h3,h4,h5,h6{
     margin: 0;padding: 0;
     
 }
+body {
+    background-color: #f0f8ff;
+}
 .header-text {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     font-size: 40px;
 }
 main {
     padding: 0 20px;
     width: 100%;
-    font-family: 'B612 Mono';
+    font-family: 'Delius Swash Caps', cursive;
     box-sizing: border-box;
+}
+nav {
+    text-align: center;
 }
 header {
     text-align: center;
     color: #5a5a5a;
+    padding: 20px 0;
+    box-sizing: border-box;
+    font-family: 'Delius Swash Caps', cursive;
 }
+header::after, header::before {
+    content:'';
+    min-width: 250px;
+    width: 50%;
+    display: block;
+    color: inherit;
+    border: 1px solid;
+    margin: 10px auto;
+    box-shadow: 23px 4px 0 0, -22px 8px 0 0;
+}
+
 .bg-color-container,
 .fg-color-container {
 display: inline-block;
@@ -45,8 +65,7 @@ vertical-align: middle;
 }
 .view-source {
     cursor: pointer;
-    font-family: 'B612 Mono', monospace;
-    margin-top: 20px;
+    padding: 20px;
     opacity: 0;
     transition: opacity .5s ease;
 }
@@ -62,11 +81,19 @@ vertical-align: middle;
 .source-container {
     display: block;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 90%;
 }
 .source-html, .source-css {
     position: relative;
+}
+.source-css .language-css{
+    max-height: 50vh;
+    overflow: scroll;
+}
+.source-html .language-html{
+    max-height: 25vh;
+    overflow: scroll;
 }
 .source-lang{
     display: block;
@@ -87,7 +114,11 @@ vertical-align: middle;
     padding: 20px;
     box-sizing: border-box;
 }
-
+@media screen and (max-width: 768px) {
+    .view-source {
+        opacity: 1;
+    }
+  }
 @media screen and (min-width: 768px) {
     main {
         margin: 0 auto;
@@ -96,4 +127,7 @@ vertical-align: middle;
     .source-container {
         width: 60%;
     }
+    
   }
+  
+  
