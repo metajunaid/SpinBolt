@@ -36,6 +36,10 @@ $(document).ready(function(){
         fgStyle += '.sbl-circ-path{color:rgba('+convertHexToRGB(color)+',0.2);border-color:rgba('+convertHexToRGB(color)+',0.2);border-right-color:'+color+'}';
         fgStyle += '.sbl-rect-spin-fill::after{background:rgba('+convertHexToRGB(color)+',0.5);}';
         addStyle('fgStyle', fgStyle);
+
+        //Change Text Color
+        $('header, .color-container').css('color',color);
+
     });
     //Showing view-source after ajax call
     $(document).on('click', '.view-source', function(){
