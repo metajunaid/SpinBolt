@@ -1,0 +1,50 @@
+@import 'variables';
+.sbl-dot-slide {
+    height: $height;
+    width: $width;
+    color: $loadercolor;
+    display: inline-block;
+    position: relative;
+    border: 2px solid;
+    animation: rotate-dot-panel 4s .5s cubic-bezier(0.25, 0.46, 0.61, 0.4) infinite;
+    
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        color: inherit;
+    }
+    &::before {
+        height: 40%;
+        width: 40%;
+        border: inherit;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+    &::after {
+        height: 0;
+        width: 0;
+        border: 5px solid;
+        border-radius: 50%;
+        bottom: 0px;
+        left: 0;
+        margin: 1px;
+        animation: move-dot 4s ease infinite;
+    }
+}
+
+@keyframes rotate-dot-panel {
+    0%{transform: rotate(0);}
+    25%{transform: rotate(90deg);}
+    50%{transform: rotate(180deg);}
+    75%{transform: rotate(270deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes move-dot{
+    0%,100%{left: 0; top:0;}
+    25%{left: 0; top:75%;}
+    50%{left: 75%; top:75%}
+    75%{left: 75%; top:0%}
+}
