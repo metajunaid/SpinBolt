@@ -454,3 +454,35 @@
     transform: rotate(15deg); }
   75% {
     transform: rotate(75deg); } }
+
+.sbl-cirle-to-rhombus {
+  height: 12px;
+  width: 12px;
+  color: #5a5a5a;
+  position: relative;
+  display: inline-block;
+  border: 5px solid;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  animation: cirle-to-rhombus 1.5s  .66s ease-in-out infinite; }
+  .sbl-cirle-to-rhombus::before, .sbl-cirle-to-rhombus::after {
+    content: '';
+    height: inherit;
+    width: inherit;
+    border: 5px solid;
+    position: absolute;
+    border-radius: 50%;
+    top: -5px;
+    animation: cirle-to-rhombus 1.5s ease-in-out infinite; }
+  .sbl-cirle-to-rhombus::before {
+    left: -30px;
+    top: 20px;
+    animation-delay: .33s; }
+  .sbl-cirle-to-rhombus::after {
+    right: -30px;
+    top: -30px;
+    animation-delay: .99s; }
+
+@keyframes cirle-to-rhombus {
+  50% {
+    border-radius: 0; } }
