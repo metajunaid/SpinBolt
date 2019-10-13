@@ -1,0 +1,55 @@
+@import 'variables';
+.sbl-half-circle-spin {
+    height: $height;
+    width: $width;
+    color: $loadercolor;
+    display: inline-block;
+    position: relative;
+    border: 1px solid;
+    border-radius: 50%;
+    animation: animeCircleSpin 4s ease-in-out infinite reverse;
+
+    &::after {
+        content: '';
+        border: 4px solid;
+        position: absolute;
+        left: 10px;
+        top: 4px;
+        border-radius: inherit;
+    }
+
+    div {
+        height: 50%;
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top:0;
+        margin: auto;
+        border: 1px solid;
+        border-radius: 50%;
+        animation: animeCircleSpin 3s ease-in-out infinite;
+
+        &::before{
+            height: 0;
+            width: 0;
+            content: '';
+            border-radius: 50%;
+            display: block;
+        }
+        &::before {
+            border: 12px solid;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            transform: rotate(-45deg);
+        }
+        
+    }
+}
+
+@keyframes animeCircleSpin {
+    0%{transform: rotate(0);}
+    50%{transform: rotate(720deg);}
+    100%{transform: rotate(0);}
+}
