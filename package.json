@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/mdjunaidalam5/SpinBolt#readme",
   "dependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "http-server": "0.12.1"
   }
 }
