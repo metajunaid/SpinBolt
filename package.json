@@ -21,6 +21,6 @@
   "homepage": "https://github.com/mdjunaidalam5/SpinBolt#readme",
   "dependencies": {
     "node-sass": "^4.13.1",
-    "http-server": "0.12.1"
+    "http-server": "0.12.3"
   }
 }
